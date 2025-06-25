@@ -93,7 +93,7 @@ We implement and compare the following forecasting approaches:
 1. Open in RStudio the file `Time Series Analysis.Rproj`.
 2. Open `varicelle_notebook.Rmd` displayed in Rstudio files explorer, then run all its cells.
 
-A generated HTML notebook (`varicelle_notebook.nb.html`) of what you must obtained is already present in the project directory.
+A generated pdf (`varicelle_notebook.pdf`) of what you should obtain is present in the project directory.
 
 ---
 
@@ -101,9 +101,9 @@ A generated HTML notebook (`varicelle_notebook.nb.html`) of what you must obtain
 
 - `varicelle_notebook.Rmd` – Main analysis notebook
 - `varicelle.csv` – Data file
-- `renv.lock` – Dependency lockfile for reproducible environment
+- `renv.lock` – Dependencies lockfile for reproducible environment
 - `Time Series Analysis.Rproj` – RStudio project file
-- `varicelle_notebook.nb.html` - Html notebook
+- `varicelle_notebook.pdf` - Pdf displaying all code and figures
 
 ---
 
@@ -131,7 +131,7 @@ To restore the environment (recommended for new users):
 
 ## Visualization
 
-Notebooks (`varicelle_notebook.Rmd` or `varicelle_notebook.nb.html`) includes all the R code, with plots of:
+ A notebook (`varicelle_notebook.Rmd`) or a pdf (`varicelle_notebook.pdf`) having all the R code, with plots of:
 - The full time series and train/test split
 - Model forecasts versus actuals
 - Residual diagnostics
