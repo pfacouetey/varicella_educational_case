@@ -131,7 +131,7 @@ To restore the environment (recommended for new users):
 
 ## Visualization
 
-The notebook (`varicelle_notebook.nb.html`) includes all the R code, with plots of:
+Notebooks (`varicelle_notebook.Rmd` or `varicelle_notebook.nb.html`) includes all the R code, with plots of:
 - The full time series and train/test split
 - Model forecasts versus actuals
 - Residual diagnostics
