@@ -4,6 +4,8 @@
 
 This project predicts monthly varicella (chickenpox) case counts using time series forecasting methods. We compare classical statistical models (Holt-Winters, SARIMA) and machine learning (Random Forest) approaches on real epidemiological data (Jan 1931 – June 1972).
 
+---
+
 ## Installation
 
 ### 1. Install R 4.5.1
@@ -14,15 +16,18 @@ This project predicts monthly varicella (chickenpox) case counts using time seri
 - **Ubuntu/Debian:**
   `sudo apt-get install r-base=4.5.1`
 
-### 2. Clone this repository and enter the project directory
+### 2. Install RStudio
+ Download and install the free version of RStudio Desktop from [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+
+### 3. Clone this repository and enter the project directory
  `git clone https://github.com/pfacouetey/varicella_educational_case.git`
  
  `cd varicella_educational_case`
 
-### 3. Install and use `renv` to restore dependencies
-Start R in the project directory, then run:
+### 4. Install and use `renv` to restore dependencies
+Open in RStudio the `Time Series Analysis.Rproj` in the project directory, then run:
  `install.packages("renv")`
- 
+
  `renv::restore()`
 
 ---
@@ -83,10 +88,11 @@ We implement and compare the following forecasting approaches:
 
 ## Usage
 
-1. Place `varicelle.csv` in the project root directory.
-2. Open `varicelle_notebook.Rmd` in RStudio or run:
- `rmarkdown::render("varicelle_notebook.Rmd")`
-3. View the results in the generated HTML notebook (`varicelle_notebook.nb.html`).
+1. Open in RStudio the `Time Series Analysis.Rproj`
+2. Open `varicelle_notebook.Rmd` displayed in Rstudio files explorer, then run all its cells.
+3. Generate the html or explore results preview in RStudio.
+
+A generated HTML notebook (`varicelle_notebook.nb.html`) of what you must obtained is present in the project directory.
 
 ---
 
@@ -95,7 +101,7 @@ We implement and compare the following forecasting approaches:
 - `varicelle_notebook.Rmd` – Main analysis notebook
 - `varicelle.csv` – Data file
 - `renv.lock` – Dependency lockfile for reproducible environment
-- `Time-Series-Analysis.Rproj` – RStudio project file
+- `Time Series Analysis.Rproj` – RStudio project file
 
 ---
 
