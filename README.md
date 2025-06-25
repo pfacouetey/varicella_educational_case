@@ -26,7 +26,7 @@ This project predicts monthly varicella (chickenpox) case counts using time seri
  `cd varicella_educational_case`
 
 ### 4. Install and use `renv` to restore dependencies
-Open in RStudio the `Time Series Analysis.Rproj` in the project directory, then run:
+Open in RStudio the `Time Series Analysis.Rproj` file, then run:
 
  `install.packages("renv")`
 
