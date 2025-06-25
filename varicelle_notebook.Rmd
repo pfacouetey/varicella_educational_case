@@ -1,6 +1,8 @@
 ---
 title: "Varicella Prediction Notebook"
-output: html_notebook
+output:
+  pdf_document: default
+  html_notebook: default
 ---
 
 #### Introduction
@@ -32,7 +34,7 @@ graphics::plot(
 )
 ```
 
-There seems to be a seasonality in the time series, but no trend is present : if there's one, it must be hidden by the seasonality.
+There seems to be a seasonality in the time series, but no trend is present : if there's one, it's hidden by the seasonality.
 
 #### Specify train and test sets
 
@@ -99,8 +101,14 @@ rmse_no_damped <- base::sqrt(base::mean((pred_no_damped - actual)^2))
 mape_no_damped <- base::mean(base::abs((pred_no_damped - actual)/actual)) * 100
 
 # Print results
-base::cat("Damped: MAE =", mae_damped, ", RMSE =", rmse_damped, ", MAPE =", mape_damped, "%\n")
-base::cat("No damped: MAE =", mae_no_damped, ", RMSE =", rmse_no_damped, ", MAPE =", mape_no_damped, "%\n")
+base::cat(
+  "Damped: MAE =", mae_damped, 
+  ", RMSE =", rmse_damped, 
+  ", MAPE =", mape_damped, "%\n")
+base::cat(
+  "No damped: MAE =", mae_no_damped, 
+  ", RMSE =", rmse_no_damped, 
+  ", MAPE =", mape_no_damped, "%\n")
 ```
 
 The damped version is showing the best results, so we will consider it as our base model.
@@ -142,8 +150,8 @@ stats::acf(
   varicelle_train_ts, 
   type = "cor", main = "Number Of Varicelle Cases over Years (Train Set)"
 )
-forecast::ggseasonplot(varicelle_train_ts, year.labels = TRUE, year.labels.left = TRUE)
-
+forecast::ggseasonplot(
+  varicelle_train_ts, year.labels = TRUE, year.labels.left = TRUE)
 ```
 
 Both plots show a presence of seasonality of period at least equal to 12. Let's differentiate at least one time to remove the seasonality.
@@ -320,7 +328,8 @@ rf_model <- randomForest::randomForest(
 
 # Combine the end of train and all of test to get a continuous series
 full_series <- c(
-  base::as.vector(varicelle_train_ts)[(length(varicelle_train_ts)-23):base::length(varicelle_train_ts)],
+  base::as.vector(varicelle_train_ts)[
+    (length(varicelle_train_ts)-23):base::length(varicelle_train_ts)],
   base::as.vector(varicelle_test_ts)
 )
 
@@ -343,7 +352,10 @@ rmse_rf <- base::sqrt(base::mean((rf_forecast - actual)^2))
 mape_rf <- base::mean(base::abs((rf_forecast - actual)/actual)) * 100
 
 # Print results
-base::cat("Random Forest : MAE =", mae_rf, ", RMSE =", rmse_rf, ", MAPE =", mape_rf, "%\n")
+base::cat(
+  "Random Forest : MAE =", mae_rf, 
+  ", RMSE =", rmse_rf, 
+  ", MAPE =", mape_rf, "%\n")
 
 ```
 
