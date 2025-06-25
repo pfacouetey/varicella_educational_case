@@ -14,6 +14,7 @@ This project predicts monthly varicella (chickenpox) case counts using time seri
   Download and install from [CRAN Windows Archive](https://cran.r-project.org/bin/windows/base/old/4.5.1/)
 
 - **Ubuntu/Debian:**
+
   `sudo apt-get install r-base=4.5.1`
 
 ### 2. Install RStudio
