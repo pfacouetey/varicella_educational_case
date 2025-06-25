@@ -90,11 +90,10 @@ We implement and compare the following forecasting approaches:
 
 ## Usage
 
-1. Open in RStudio the `Time Series Analysis.Rproj`
+1. Open in RStudio the file `Time Series Analysis.Rproj`.
 2. Open `varicelle_notebook.Rmd` displayed in Rstudio files explorer, then run all its cells.
-3. Generate the html or explore results preview in RStudio.
 
-A generated HTML notebook (`varicelle_notebook.nb.html`) of what you must obtained is present in the project directory.
+A generated HTML notebook (`varicelle_notebook.nb.html`) of what you must obtained is already present in the project directory.
 
 ---
 
@@ -104,6 +103,7 @@ A generated HTML notebook (`varicelle_notebook.nb.html`) of what you must obtain
 - `varicelle.csv` – Data file
 - `renv.lock` – Dependency lockfile for reproducible environment
 - `Time Series Analysis.Rproj` – RStudio project file
+- `varicelle_notebook.nb.html` - Html notebook
 
 ---
 
