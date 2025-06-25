@@ -111,11 +111,13 @@ A generated HTML notebook (`varicelle_notebook.nb.html`) of what you must obtain
 All R package dependencies are managed with [renv](https://rstudio.github.io/renv/):
 
 To initialize or update the lockfile:
+
 `renv::init()`
 
 `renv::snapshot()`
 
 To restore the environment (recommended for new users):
+
 `renv::restore()`
 
 **Key packages:**  
